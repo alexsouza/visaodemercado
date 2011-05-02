@@ -1,10 +1,13 @@
 package main.java.visaodemercado.empresas.entidades;
 
+import java.util.List;
+
 public class Empresa {
 
 	private String codigo;
 	private String nomeComercial;
 	private String razaoSocial;
+	private List<Indicador> indicadores;
 	
 	public Empresa(String codigo, String nomeComercial, String razaoSocial) {
 		super();
@@ -23,6 +26,14 @@ public class Empresa {
 	
 	public String getRazaoSocial() {
 		return razaoSocial;
+	}
+
+	public List<Indicador> getIndicadores() {
+		return indicadores;
+	}
+
+	public void setIndicadores(List<Indicador> indicadores) {
+		this.indicadores = indicadores;
 	}
 
 	@Override
@@ -53,7 +64,8 @@ public class Empresa {
 	@Override
 	public String toString() {
 		return "Empresa [codigo=" + codigo + ", nomeComercial=" + nomeComercial
-				+ ", razaoSocial=" + razaoSocial + "]";
+				+ ", razaoSocial=" + razaoSocial + ", indicadores="
+				+ indicadores + "]";
 	}
 	
 }
